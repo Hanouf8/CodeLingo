@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Learning Tasks</title>
+    <link rel="stylesheet" href="/css/code.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="/js/code.js" defer></script>
+    <script src="/js/exit.js"></script>
+  </head>
+  <body>
+    <!-- Character Icons -->
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5604/5604715.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/256/2533/2533325.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5452/5452873.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/256/1670/1670569.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/256/1670/1670569.png"
+      alt="Developer Character"
+      class="character"
+    />
+
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5452/5452873.png"
+      alt="Developer Character"
+      class="character"
+    />
+
+    <img
+      src="https://cdn-icons-png.flaticon.com/256/2533/2533325.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5604/5604715.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <!-- Sidebar -->
+    <label>
+      <input type="checkbox" />
+      <div class="toggle">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+      </div>
+      <div class="slide">
+        <h1>CodeLingo</h1>
+        <h2></h2>
+        <ul>
+          <li>
+            <a href="Book.html"><i class="fas fa-book"></i> Find a book!</a>
+          </li>
+          <li>
+            <a href="Languages.html"
+              ><i class="fa-solid fa-chalkboard-user"></i> Lets Learn!</a
+            >
+          </li>
+          <li>
+            <a href="code.html"
+              ><i class="fas fa-laptop-code"></i> Lets Code!</a
+            >
+          </li>
+          <li>
+            <a href="Login.html" onclick="confirmExit()"
+              ><i class="fas fa-power-off"></i> Exit</a
+            >
+          </li>
+        </ul>
+      </div>
+    </label>
+
+    <!----Code Page Content ------------------------------------------->
+    <div class="container">
+      <h3>
+        Choose a Language to write code
+
+        <span class="code-text">$ npm install creativity</span>
+        <span class="code-text">git commit -m "Make it awesome"</span>
+        <span class="code-text">console.log("Hello, World!");</span>
+        <span class="code-text">sudo rm -rf boring</span>
+      </h3>
+
+      <div class="language-buttons">
+        <button onclick="selectLanguage('java')">
+          <i class="fab fa-java"></i>
+        </button>
+        <button onclick="selectLanguage('react')">
+          <i class="fab fa-react"></i>
+        </button>
+        <button onclick="selectLanguage('javas')">
+          <i class="fab fa-js-square"></i>
+        </button>
+        <button onclick="selectLanguage('swift')">
+          <i class="fab fa-swift"></i>
+        </button>
+        <button onclick="selectLanguage('dart')">
+          <i class="fab fa-dart-lang"></i>
+        </button>
+        <button onclick="selectLanguage('python')">
+          <i class="fab fa-python"></i>
+        </button>
+      </div>
+
+      <div id="task-container"></div>
+      <button onclick="toggleSolution()" id="show-sol-btn">
+        Show Solution
+      </button>
+      <div id="solution-container"></div>
+    </div>
+    <script src="code.js"></script>
+  </body>
+</html>

@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  position: relative;
+}
+
+.slide {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  background-color: #2c3e50;
+  transition: 0.5s ease;
+  transform: translateX(-250px);
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slide h1 {
+  font-size: 30px;
+  color: #ecf0f1;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 0;
+  padding-top: 70px;
+  pointer-events: none;
+}
+
+h2 {
+  margin-top: -40px;
+  margin-bottom: 40px;
+  right: 99px;
+  font-weight: 800;
+  height: 3px;
+  width: 90px;
+  border-radius: 22px;
+  background: #3498db;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a:hover {
+  color: #3498db;
+}
+
+ul li a {
+  color: #ecf0f1;
+  font-weight: 500;
+  padding: 15px 20px;
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+ul li a i {
+  width: 40px;
+  text-align: center;
+}
+
+input {
+  display: none;
+  visibility: hidden;
+}
+
+.toggle {
+  margin-top: 8px;
+  position: fixed;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  left: 15px;
+  z-index: 1001;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #3498db;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.toggle:hover {
+  background-color: #2980b9;
+}
+
+.toggle .common {
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  border-radius: 50px;
+  background-color: #ecf0f1;
+  transition: 0.3s ease;
+}
+
+.toggle .top_line {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle .bottom_line {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle_line {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+input:checked ~ .slide {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/*------Code Page Styles--------------------------------*/
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; /* Ensure container is above the characters */
+}
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #2c3e50; /* Terminal green text */
+  position: relative;
+  background-color: #ffffff; /* Dark background like a terminal */
+  padding: 20px;
+  border: 4px solid #3498db; /* Green border */
+  border-radius: 10px; /* Slightly rounded corners */
+  font-family: "Courier New", Courier, monospace; /* Monospace font for terminal feel */
+  box-shadow: 0 0 20px rgb(102, 202, 241); /* Green glow */
+  white-space: pre-wrap; /* Preserve whitespace for terminal formatting */
+}
+
+h3::before {
+  content: "> "; /* Terminal prompt symbol */
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #3498db;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 10px;
+  height: 20px;
+  background-color: #3498db; /* Blinking cursor */
+  animation: blink 1s infinite;
+}
+
+h3 span.code-text {
+  position: absolute;
+  font-size: 1rem;
+  color: #3498db;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  animation: floatText 10s linear infinite;
+}
+
+h3 span.code-text:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  content: "$ npm install creativity";
+}
+
+h3 span.code-text:nth-child(2) {
+  top: 30%;
+  left: 70%;
+  content: 'git commit -m "Make it awesome"';
+}
+
+h3 span.code-text:nth-child(3) {
+  top: 50%;
+  left: 20%;
+  content: 'console.log("Hello, World!");';
+}
+
+h3 span.code-text:nth-child(4) {
+  top: 80%;
+  left: 60%;
+  content: "sudo rm -rf boring";
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* ---------------- */
+.language-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px;
+  cursor: pointer;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+#task-container {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+#task-container pre {
+  font-size: 1rem;
+  color: #555;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+  white-space: pre-wrap;
+  tab-size: 4;
+}
+
+#solution-container {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#solution-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+#solution-container pre {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  color: #333;
+  white-space: pre-wrap;
+  tab-size: 4;
+}
+
+#show-sol-btn {
+  display: block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#show-sol-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Level Buttons */
+.level-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.level-buttons button {
+  padding: 15px;
+  cursor: pointer;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.level-buttons button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.language-buttons button {
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Default background color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.language-buttons button i {
+  font-size: 2rem; /* Adjust icon size */
+  color: #ffffff; /* Default icon color */
+}
+
+.language-buttons button:hover {
+  transform: translateY(-2px);
+}
+
+/* Java */
+.language-buttons button:nth-child(1) {
+  background-color: #007396; /* Java blue */
+}
+
+.language-buttons button:nth-child(1):hover {
+  background-color: #005f7a;
+}
+
+/* React */
+.language-buttons button:nth-child(2) {
+  background-color: #61dafb; /* React blue */
+}
+
+.language-buttons button:nth-child(2):hover {
+  background-color: #4fa8c7;
+}
+
+/* JavaScript */
+.language-buttons button:nth-child(3) {
+  background-color: #f7df1e; /* JavaScript yellow */
+}
+
+.language-buttons button:nth-child(3):hover {
+  background-color: #d6c21a;
+}
+
+/* Swift */
+.language-buttons button:nth-child(4) {
+  background-color: #ffac45; /* Swift orange */
+}
+
+.language-buttons button:nth-child(4):hover {
+  background-color: #e6953e;
+}
+
+/* Dart */
+.language-buttons button:nth-child(5) {
+  background-color: #00b4ab; /* Dart teal */
+}
+
+.language-buttons button:nth-child(5):hover {
+  background-color: #009c94;
+}
+
+/* Python */
+.language-buttons button:nth-child(6) {
+  background-color: #3776ab; /* Python blue */
+}
+
+.language-buttons button:nth-child(6):hover {
+  background-color: #2c5f8a;
+}
+
+body .character {
+  position: absolute;
+  width: 100px; /* Smaller size */
+  height: auto;
+  opacity: 0.5; /* Make characters subtle */
+  animation: floatCharacters 5s infinite ease-in-out;
+  z-index: 0; /* Ensure characters are behind the container */
+}
+
+/* Position and animate each character */
+/* laptop share  */
+body .character:nth-child(1) {
+  top: 30%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+body .character:nth-child(2) {
+  top: 30%;
+  right: 5%;
+  animation-delay: 1s;
+}
+/* face  */
+body .character:nth-child(3) {
+  top: 50%;
+  left: 15%;
+  animation-delay: 2s;
+}
+
+body .character:nth-child(4) {
+  bottom: 40%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+body .character:nth-child(5) {
+  top: 5%;
+  left: 10%;
+  animation-delay: 4s;
+}
+
+body .character:nth-child(6) {
+  top: 5%;
+  right: 10%;
+  animation-delay: 5s;
+}
+/* key */
+body .character:nth-child(7) {
+  bottom: 15%;
+  left: 5%;
+  animation-delay: 6s;
+}
+
+body .character:nth-child(8) {
+  bottom: 15%;
+  right: 5%;
+  animation-delay: 7s;
+}
+
+@keyframes floatCharacters {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg); /* Larger floating effect */
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}

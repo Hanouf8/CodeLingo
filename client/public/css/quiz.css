@@ -1,0 +1,98 @@
+body {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Quiz title styling */
+#quiz-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Quiz container styling */
+#quiz-container {
+  background-color: #297fb91e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Question styling */
+#quiz-container div {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+}
+
+#quiz-container div p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Option styling */
+#quiz-container label {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e9ecef;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#quiz-container label:hover {
+  background-color: #d4d8dc;
+}
+
+#quiz-container input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Button styling */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Feedback styling */
+#quiz-container p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Correct answer feedback */
+#quiz-container p[style*="color: green"] {
+  color: #27ae60 !important;
+  font-weight: bold;
+}
+
+/* Incorrect question styling */
+#quiz-container div[style*="color: red"] {
+  color: #e74c3c !important;
+  border-color: #e74c3c;
+}

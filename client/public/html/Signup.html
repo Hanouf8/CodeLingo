@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="/css/Signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    />
+    <script src="/js/signup.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>SignUp Now!</h2>
+      <form id="form">
+        <div class="input-box">
+          <input
+            type="text"
+            name="name"
+            id="name_input"
+            placeholder="Enter Name"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="text"
+            name="email"
+            id="email_input"
+            placeholder="Enter Email"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            name="password"
+            id="password_input"
+            placeholder="Create Password"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            name="repeat_password"
+            id="repeat_password_input"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        <div class="input-box button">
+          <input type="submit" value="SignUp" />
+        </div>
+        <div class="text">
+          <h3>Already Have An Account? <a href="/html/Login.html">Login</a></h3>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

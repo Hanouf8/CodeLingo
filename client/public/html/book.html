@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming Books Finder</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/book.css" />
+    <script src="/js/Book.js" defer></script>
+  </head>
+  <body>
+    <!-- Character Icons -->
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5432/5432699.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5402/5402751.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/3574/3574808.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5520/5520824.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5520/5520824.png"
+      alt="Developer Character"
+      class="character"
+    />
+
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/3574/3574808.png"
+      alt="Developer Character"
+      class="character"
+    />
+
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5402/5402751.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5432/5432699.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <!-- Sidebar -->
+    <label>
+      <input type="checkbox" />
+      <div class="toggle">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+      </div>
+      <div class="slide">
+        <h1>CodeLingo</h1>
+        <h2></h2>
+        <ul>
+          <li>
+            <a href="Book.html"><i class="fas fa-book"></i> Find a book!</a>
+          </li>
+          <li>
+            <a href="Languages.html"
+              ><i class="fa-solid fa-chalkboard-user"></i> Lets Learn!</a
+            >
+          </li>
+          <li>
+            <a href="code.html"
+              ><i class="fas fa-laptop-code"></i> Lets Code!</a
+            >
+          </li>
+          <li id="logoutButton">
+            <a href="Login.html" onclick="confirmExit()"
+              ><i class="fas fa-power-off"></i> Exit</a
+            >
+          </li>
+        </ul>
+      </div>
+    </label>
+
+    <!-- Book Page Content -->
+    <div class="container">
+      <h1 class="book1">
+        CodeLingo Books Finder <i class="book-icon book1 fas fa-book"></i>
+        <!-- Book icon -->
+        <i class="book-icon book2 fas fa-book-open"></i>
+        <!-- Open book icon -->
+        <i class="book-icon book3 fas fa-book-reader"></i>
+        <!-- Reader icon -->
+        <i class="book-icon book4 fas fa-bookmark"></i>
+        <!-- Bookmark icon -->
+        <!-- <i class="book-icon reader fas fa-user-graduate"></i>
+      Graduation cap icon -->
+      </h1>
+      <div class="search-box">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for books..."
+        />
+        <button id="search-button">Search</button>
+      </div>
+      <div id="results"></div>
+    </div>
+    <script src="/js/exit.js"></script>
+  </body>
+</html>

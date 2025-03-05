@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Chapter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/chapters.css" />
+    <script src="/js/chapters.js" defer></script>
+    <script src="/js/exit.js"></script>
+  </head>
+  <body>
+    <!-- Character Icons -->
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/9130/9130511.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/6802/6802191.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5386/5386324.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/4247/4247930.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/4247/4247930.png"
+      alt="Developer Character"
+      class="character"
+    />
+
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/5386/5386324.png"
+      alt="Developer Character"
+      class="character"
+    />
+
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/6802/6802191.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/9130/9130511.png"
+      alt="Developer Character"
+      class="character"
+    />
+    <!-- Sidebar -->
+    <label>
+      <input type="checkbox" />
+      <div class="toggle">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+      </div>
+      <div class="slide">
+        <h1>CodeLingo</h1>
+        <h2></h2>
+        <ul>
+          <li>
+            <a href="Book.html"><i class="fas fa-book"></i> Find a book!</a>
+          </li>
+          <li>
+            <a href="Languages.html"
+              ><i class="fa-solid fa-chalkboard-user"></i> Lets Learn!</a
+            >
+          </li>
+          <li>
+            <a href="code.html"
+              ><i class="fas fa-laptop-code"></i> Lets Code!</a
+            >
+          </li>
+          <li>
+            <a href="Login.html" onclick="confirmExit()"
+              ><i class="fas fa-power-off"></i> Exit</a
+            >
+          </li>
+        </ul>
+      </div>
+    </label>
+
+    <!----Chapters Page Content ------------------------------------------->
+    <div class="container">
+      <h1 id="chapter-title"></h1>
+      <div id="chapters-container"></div>
+      <button onclick="location.href='levels.html?language=' + language">
+        Back to Level Selection
+      </button>
+    </div>
+  </body>
+</html>

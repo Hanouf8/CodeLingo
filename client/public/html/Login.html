@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/Login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/js/login.js" defer></script>
+    <script src="/js/Splash.js"></script>
+  </head>
+  <body>
+    <div class="splash-screen" id="splash-screen">
+      <h1>CodeLingo</h1>
+      <h4>Learn Coding Languages!</h4>
+      <img src="/img/login.png" alt="Logo" class="logo" />
+    </div>
+
+    <div class="login-form">
+      <div class="container">
+        <div class="main">
+          <div class="content">
+            <h2>Welcome Back!</h2>
+            <form id="loginForm">
+              <input
+                type="text"
+                name="email_input"
+                id="email_input"
+                placeholder="Enter Email"
+                required
+                autofocus
+              />
+              <input
+                type="password"
+                name="password_input"
+                id="password_input"
+                placeholder="Enter Password"
+                required
+              />
+              <button class="btn" type="submit">Login</button>
+            </form>
+            <p class="account">
+              Don't Have An Account? <a href="/html/Signup.html">Sign Up</a>
+            </p>
+          </div>
+          <div class="form-img">
+            <img src="/img/login.png" alt="Login Img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
